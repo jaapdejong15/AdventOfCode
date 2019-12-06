@@ -14,7 +14,7 @@ public class Part2_1 {
             long startTime = System.nanoTime();
             System.out.println("Answer: " + solution(s));
             long endTime = System.nanoTime();
-            System.out.println("Solved in " + ((endTime - startTime) / 100000000.0f) + " seconds");
+            System.out.println("Solved in " + ((endTime - startTime) / Math.pow(10, 9)) + " seconds");
         } catch (FileNotFoundException e) {
             System.out.println(e.getMessage());
         }

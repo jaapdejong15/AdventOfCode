@@ -20,7 +20,7 @@ public class Part3_1 {
             inputParser(in);
             System.out.println(solve());
             long endTime = System.nanoTime();
-            System.out.println("Solved in " + ((endTime - startTime) / 100000000.f) + " seconds");
+            System.out.println("Solved in " + ((endTime - startTime) / Math.pow(10, 9)) + " seconds");
 
         } catch (FileNotFoundException e) {
             System.out.println(e.getMessage());

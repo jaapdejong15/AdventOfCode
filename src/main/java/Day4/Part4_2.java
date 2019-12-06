@@ -5,7 +5,13 @@ import java.util.List;
 
 @SuppressWarnings("Duplicates")
 public class Part4_2 {
+
     public static void main(String[] args) {
+        long runtime = run();
+        System.out.println("Solved in " + (runtime / Math.pow(10, 9)) + " seconds");
+    }
+
+    public static long run() {
         long startTime = System.nanoTime();
         List<Integer> passwords = new ArrayList<>();
         int lowerRange = 152085;
@@ -30,8 +36,8 @@ public class Part4_2 {
             }
         }
         long endTime = System.nanoTime();
-        System.out.println(passwords.size());
-        System.out.println("Solved in " + ((endTime - startTime) / 100000000.0f) + " seconds");
+        System.out.println("Answer: " + passwords.size());
+        return endTime - startTime;
     }
 
     private static boolean checkPassword(int[] passwordArr) {
